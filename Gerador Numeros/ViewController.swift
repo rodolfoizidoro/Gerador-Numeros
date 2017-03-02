@@ -14,6 +14,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    @IBOutlet weak var legendaResultado: UILabel!
+    @IBAction func gerarNumero(_ sender: Any) {
+        
+        let numeroAleatorio = arc4random_uniform( 101 );
+        
+        legendaResultado.text = String(numeroAleatorio);
+        
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
